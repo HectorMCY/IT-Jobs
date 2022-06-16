@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Switch, BrowserRouter, Routes, Route } from "react-router-dom";
 
 //Importación de Páginas
 import Registro from './pages/Registro.js';
