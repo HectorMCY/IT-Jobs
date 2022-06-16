@@ -31,8 +31,7 @@ export default class Home extends Component {
 
 	render(){
 		return(
-			<StyledHome>
-				<div-home>
+				<div>
 					{this.state.enableAlert ? <Alert message={this.state.alert} type={this.state.alertType}/> : null}
 					<h1>INICIO DE SESIÓN</h1>
 					<EmailEntry ref={email => this.email = email} label="Correo Electrónico"/>
@@ -40,8 +39,7 @@ export default class Home extends Component {
 					<Button onClick={this.login}>Entrar</Button>
 					<LinkButton href="/Registro">¿No estás dentro? Regístrate</LinkButton>
 					{this.state.redirect ? <Navigate to={this.state.route}/> : null }
-				</div-home>
-			</StyledHome>
+				</div>
 		)
 	}
 }
