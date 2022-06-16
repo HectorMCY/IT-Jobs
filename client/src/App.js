@@ -24,7 +24,6 @@ function App() {
 
   return(
     <UserContext.Provider value={{user, setUser}}>
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<home/>}/>
         <Route path="/registro" element={<Registro/>}/>
@@ -38,7 +37,6 @@ function App() {
           <Route path="vacante" element={<CrearVacante/>}/>
         </Route>
       </Routes>
-    </BrowserRouter>
     </UserContext.Provider>
   )
 }
