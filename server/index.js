@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const con = mysql.createConnection({
+const con = mysql.createPool({
   host: dbConfig.HOST,
   user: dbConfig.USER,
   password: dbConfig.PASSWORD,
