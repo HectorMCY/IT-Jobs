@@ -10,7 +10,8 @@
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "react-router-dom": "^6.3.0"
   },
   "proxy": "http://localhost:3001",
   "scripts": {
@@ -38,6 +39,5 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.3.0"
   }
 }
