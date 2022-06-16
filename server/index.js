@@ -6,22 +6,24 @@ const express = require("express");
 
 const PORT = process.env.PORT || 3001;
 
-var mysql = require('mysql');
+const mysql = require('mysql');
+
+const dbConfig = require('../config/db.config.js');
 
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Rojito02!"
+const con = mysql.createConnection({
+  host: dbConfig.HOST,
+  user: dbConfig.USER,
+  password: dbConfig.PASSWORD,
+  database: dbConfig.DB
 });
 
-con.connect(function(err) {
+con.connect( err => {
   if (err) throw err;
-  console.log("Connected!");
-  con.query("use `it-jobs`;");
+  console.log("Connected to the database!");
 });
 
 app.use(express.json());
