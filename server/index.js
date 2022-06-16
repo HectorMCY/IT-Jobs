@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const con = mysql.createPool({
+const con = mysql.createConnection({
   host: dbConfig.HOST,
   user: dbConfig.USER,
   password: dbConfig.PASSWORD,
@@ -229,10 +229,7 @@ app.put("/solicitud/marcarRevisada/:id", (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-  let url = path.join(__dirname, '../client/build', 'index.html');
-  if (!url.startsWith('/app/')) // we're on local windows
-    url = url.substring(1);
-  res.sendFile(url);
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 app.listen(PORT, () => {
