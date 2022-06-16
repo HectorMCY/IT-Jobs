@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { IndexRoute, Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //Importación de Páginas
 import Registro from './pages/Registro.js';
@@ -24,7 +24,7 @@ function App() {
 
   return(
     <UserContext.Provider value={{user, setUser}}>
-    <Router>
+    <BrowserRouter basename="/">
       <Routes>
         <Route index element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
@@ -38,7 +38,7 @@ function App() {
           <Route path="vacante" element={<CrearVacante/>}/>
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
     </UserContext.Provider>
   )
 }
