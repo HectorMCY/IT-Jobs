@@ -23,23 +23,7 @@ function App() {
   const [user, setUser] = useState({id: 0, name: "undefined"});
 
   return(
-    <UserContext.Provider value={{user, setUser}}>
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home/>}/>
-        <Route path="/registro" element={<Registro/>}/>
-        <Route path="/solicitante" element={<LayoutSolicitante/>}>
-          <Route index element={<DashboardSolicitante/>}/>
-          <Route path="solicitud" element={<CrearSolicitud/>}/>
-          <Route path="perfil" element={<PerfilProfesional/>}/>
-        </Route>
-        <Route path="/reclutador" element={<LayoutReclutador/>}>
-          <Route index element={<DashboardReclutador/>}/>
-          <Route path="vacante" element={<CrearVacante/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    </UserContext.Provider>
+    <Home/>
   )
 }
 
