@@ -24,9 +24,9 @@ function App() {
 
   return(
     <UserContext.Provider value={{user, setUser}}>
-    <Router>
+    <Router history={hashHistory}>
       <Routes>
-        <Route index element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/solicitante" element={<LayoutSolicitante/>}>
           <Route index element={<DashboardSolicitante/>}/>
