@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //Importación de Páginas
 import Registro from './pages/Registro.js';
@@ -26,7 +26,7 @@ function App() {
     <UserContext.Provider value={{user, setUser}}>
     <Router>
       <Routes>
-        <Route path="/" element={<home/>}/>
+        <Route index element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/solicitante" element={<LayoutSolicitante/>}>
           <Route index element={<DashboardSolicitante/>}/>
