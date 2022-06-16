@@ -25,7 +25,7 @@ function App() {
   return(
     <UserContext.Provider value={{user, setUser}}>
     <BrowserRouter basename="/">
-      <Switch>
+      <Routes>
         <Route index element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/solicitante" element={<LayoutSolicitante/>}>
@@ -37,7 +37,7 @@ function App() {
           <Route index element={<DashboardReclutador/>}/>
           <Route path="vacante" element={<CrearVacante/>}/>
         </Route>
-      </Switch>
+      </Routes>
     </BrowserRouter>
     </UserContext.Provider>
   )
