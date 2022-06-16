@@ -26,7 +26,7 @@ function App() {
     <UserContext.Provider value={{user, setUser}}>
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <IndexRoute element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/solicitante" element={<LayoutSolicitante/>}>
           <Route index element={<DashboardSolicitante/>}/>
