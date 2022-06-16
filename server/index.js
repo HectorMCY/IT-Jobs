@@ -14,17 +14,17 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const con = mysql.createConnection({
+const con = mysql.createPool({
   host: dbConfig.HOST,
   user: dbConfig.USER,
   password: dbConfig.PASSWORD,
   database: dbConfig.DB
 });
 
-con.connect( err => {
+/*con.connect( err => {
   if (err) throw err;
   console.log("Connected to the database!");
-});
+});*/
 
 app.use(express.json());
 //app.use(express.urlencoded({extended: true}));
