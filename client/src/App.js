@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Switch, Routes, Route } from "react-router-dom";
 
 //Importación de Páginas
 import Registro from './pages/Registro.js';
@@ -24,8 +24,7 @@ function App() {
 
   return(
     <UserContext.Provider value={{user, setUser}}>
-    <BrowserRouter basename="/">
-      <Routes>
+      <Switch>
         <Route index element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/solicitante" element={<LayoutSolicitante/>}>
@@ -37,8 +36,7 @@ function App() {
           <Route index element={<DashboardReclutador/>}/>
           <Route path="vacante" element={<CrearVacante/>}/>
         </Route>
-      </Routes>
-    </BrowserRouter>
+      </Switch>
     </UserContext.Provider>
   )
 }
