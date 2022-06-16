@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Switch, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 //Importación de Páginas
 import Registro from './pages/Registro.js';
@@ -24,7 +24,7 @@ function App() {
 
   return(
     <UserContext.Provider value={{user, setUser}}>
-      <Switch>
+      <Routes>
         <Route index element={<Home/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/solicitante" element={<LayoutSolicitante/>}>
@@ -36,7 +36,7 @@ function App() {
           <Route index element={<DashboardReclutador/>}/>
           <Route path="vacante" element={<CrearVacante/>}/>
         </Route>
-      </Switch>
+      </Routes>
     </UserContext.Provider>
   )
 }
