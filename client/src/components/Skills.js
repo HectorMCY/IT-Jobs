@@ -75,6 +75,7 @@ export class EditableRow extends Component {
                   nivelDeDominio: document.getElementById("nivelDeDominio").value};
 
     fetch("/skills/persona/"+this.context.user.id, {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}});
+    console.log("Añadido");
     this.props.updateList();
   }
 
