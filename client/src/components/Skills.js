@@ -19,10 +19,6 @@ export default class Skills extends Component {
       skills: data.content}));
   }
 
-  addRecord(data){
-    this.state.skills.push(data);
-  }
-
   render(){
     return(
       <>
@@ -35,7 +31,7 @@ export default class Skills extends Component {
         </thead>
         <tbody>
           {this.state.skills.map(register => (<SkillsItem key={register.idSkills} info={register} updateList={this.updateList.bind(this)}/>))}
-          <EditableRow addRecord={this.addRecord.bind(this)}/>
+          <EditableRow updateList={this.updateList.bind(this)}/>
         </tbody>
       </StyledTable>
       </>
@@ -79,7 +75,7 @@ export class EditableRow extends Component {
                   nivelDeDominio: document.getElementById("nivelDeDominio").value};
 
     fetch("/skills/persona/"+this.context.user.id, {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}});
-    this.props.addRecord(data);
+    this.props.updateList();
   }
 
   render(){

@@ -10,7 +10,7 @@ export const Navbar = styled.nav`
         text-align: left;
         padding: 10px 10px;
         list-style-type: none;
-        width: 100%;
+        width: (100%);
         
         margin-bottom: 5px;
         background: ${colors.blue};
