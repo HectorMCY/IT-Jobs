@@ -8,6 +8,7 @@ export const StyledHome = styled.body`
   flex-direction: column;
   align-items: center;
   padding: 130px;
+  padding-top: 20px;
 
   div-home {
     display: flex;

@@ -23,7 +23,7 @@ export default class DashboardSolicitante extends Component {
 
 		return(
 				<div className="pageContent">
-				<h1>Dashboard Solicitante</h1>
+				<h1>Tablero</h1>
 
 				{this.state.aplications.length > 0 ?
 				<StyledTable>

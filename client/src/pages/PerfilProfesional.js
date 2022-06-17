@@ -8,7 +8,7 @@ export default class PerfilProfesional extends Component {
 	render(){
 		return(
 			<div className="pageContent">
-				<h1>Perfil Profesional </h1>
+				<h1>Mi Perfil Profesional </h1>
 				<h2>Preparación Academica</h2>
 				<AcademicExperience/>
 				<h2>Experiencia Laboral</h2>
