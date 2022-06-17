@@ -7,7 +7,7 @@ export const Navbar = styled.nav`
     background-color: ${colors.black};
 
     ul {
-        padding: 10px;
+        padding: 10px 10px 10px 10px;
     }
 
     ul > li {
