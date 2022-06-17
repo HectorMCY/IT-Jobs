@@ -6,6 +6,10 @@ export const Navbar = styled.nav`
     height: 100%;
     background-color: ${colors.black};
 
+    ul {
+        padding: 10px;
+    }
+
     ul > li {
         text-align: left;
         padding: 10px 10px;
