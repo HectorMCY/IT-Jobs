@@ -6,3 +6,5 @@ Esta es una aplicación web orientada a permitir la conexión entre personas en 
 ramo de Tecnologías de la Información. Esta desarrollada empleando Express y React, administrándose ambos servicios por NPM.
 
 La aplicación fue inicialmente desplegada en Heroku, y por tanto está optimizada para su despliegue en tal plataforma.
+
+El controlador de esta aplicación es una base de datos MySQL, que contiene toda la información de solicitantes y reclutadores.
