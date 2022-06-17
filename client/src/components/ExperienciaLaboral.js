@@ -74,7 +74,7 @@ class EditableRow extends Component {
                   startDate: document.getElementById("workingStartDate").value,
                   endDate: document.getElementById("workingEndDate").value,
                   actividadesRealizadas: document.getElementById("actividadesRealizadas").value,
-                  comments: document.getElementById("comentarios").value};
+                  comments: document.getElementById("comentariosLaboral").value};
 
     fetch("/expLaboral/persona/"+this.context.user.id, {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}});
     this.props.updateList();
@@ -88,7 +88,7 @@ class EditableRow extends Component {
           <td><input id="workingStartDate" type="date"/></td>
           <td><input id="workingEndDate" type="date"/></td>
           <td><input id="actividadesRealizadas"/></td>
-          <td><textarea id="comentarios" rows="3"/></td>
+          <td><textarea id="comentariosLaboral" rows="3"/></td>
           <td><Button onClick={this.addExperienceInfo}>Añadir</Button></td>
       </tr>
     )
