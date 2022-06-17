@@ -7,6 +7,7 @@ export const StyledPage = styled.body`
     nav {
         width: 15%;
         float: left;
+        padding: 10px;
     }
 
     header {
