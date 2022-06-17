@@ -74,8 +74,7 @@ export class EditableRow extends Component {
     const data = {habilidad: document.getElementById("habilidad").value,
                   nivelDeDominio: document.getElementById("nivelDeDominio").value};
 
-    fetch("/skills/persona/"+this.context.user.id, {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}});
-    this.props.updateList();
+    fetch("/skills/persona/"+this.context.user.id, {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}}).then(response => this.props.updateList());
   }
 
   render(){
